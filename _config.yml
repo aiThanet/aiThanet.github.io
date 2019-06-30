@@ -16,7 +16,7 @@ navigation:
   - name: Tags
     url: /tags
 
-paginate: 1
+paginate: 3
 
 excerpt_separator: <!-- more -->
 
