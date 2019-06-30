@@ -31,17 +31,9 @@ layout: default
 
 <div class="pagination">
   {% if page.previous.url %}
-      <a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}" class="previous">
-        ← Previous
-      </a>
-  {% else %}
-      <span class="previous">Previous</span>
+      <a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}" class="previous">← Previous</a>
   {% endif %}
   {% if page.next.url %}
-      <a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}" class="next">
-        Next →
-      </a>
-  {% else %}
-      <span class="next ">Next</span>
+      <a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}" class="next">Next →</a>
   {% endif %}
 </div>
