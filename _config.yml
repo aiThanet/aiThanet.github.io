@@ -2,7 +2,7 @@ name: aiThanet
 description: my simple blog
 
 
-avatar: /_site/images/logo.png
+avatar: https://raw.githubusercontent.com/aiThanet/aiThanet.github.io/master/_site/images/logo.png
 favicon: https://raw.githubusercontent.com/aiThanet/aiThanet.github.io/master/_site/images/logo.png
 
 
