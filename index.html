@@ -3,51 +3,58 @@ layout: default
 ---
 
 {% if site.posts.size == 0 %}
-  <h2>No post found</h2>
+<h2>No post found</h2>
 {% endif %}
 
 <div class="posts">
   {% for post in paginator.posts %}
-    <article class="post">
-      <h1>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h1>
+  <article class="post">
+    <h1>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </h1>
 
-      <div clsss="meta">
-        <span class="date">
-          {{ post.date | date: "%Y-%m-%d" }}
-        </span>
+    <div clsss="meta">
+      <span class="date">
+        {{ post.date | date: "%Y-%m-%d" }}
+      </span>
 
-        <ul class="tag">
-          {% for tag in post.tags %}
-          <li>
-            <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
-              {{ tag }}
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+      <ul class="tag">
+        {% for tag in post.tags %}
+        <li>
+          <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
+            {{ tag }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
 
-      <div class="entry">
+    <!-- <div class="entry">
         {{ post.excerpt | truncate: 200 }}
-      </div>
+      </div> -->
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+  </article>
   {% endfor %}
 </div>
 
-
 <div class="pagination">
-  <div> <center><span class="page_number ">
-      Page: {{ paginator.page }} of {{ paginator.total_pages }}
-    </span></center></div>
+  <div>
+    <center>
+      <span class="page_number ">
+        Page: {{ paginator.page }} of {{ paginator.total_pages }}
+      </span>
+    </center>
+  </div>
   {% if paginator.previous_page %}
-    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="previous">← Previous</a>
-  {% endif %}
- 
-  {% if paginator.next_page %}
-    <a href="{{ site.baseurl}}{{ paginator.next_page_path }}" class="next">Next →</a>
+  <a
+    href="{{ site.baseurl }}{{ paginator.previous_page_path }}"
+    class="previous"
+    >← Previous</a
+  >
+  {% endif %} {% if paginator.next_page %}
+  <a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="next"
+    >Next →</a
+  >
   {% endif %}
 </div>
