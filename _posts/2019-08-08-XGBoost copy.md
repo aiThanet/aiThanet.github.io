@@ -10,12 +10,12 @@ comments: true
 
 source : <https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/>
 
-# What is XGBoost
+### What is XGBoost
 
 > XGBoost is an algorithm that has recently been dominating applied machine learning and Kaggle competitions.
 > XGBoost is an implementation of over gradient boosted decision trees which designed to improve speed and performance.
 
-# XGBoost Advantage
+### XGBoost Advantage
 
 1. Regularization : Standard GBM has no regularization to reduce overfitting problem.
 2. Parallel Processing : much easy to scale, more detail on how [parallel](http://zhanpengfang.github.io/418home.html).
@@ -25,9 +25,9 @@ source : <https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-
 6. Built-in Cross-Validation
 7. Continue on Existing Model
 
-# XGBoost Parameters
+#### XGBoost Parameters
 
-## General Parameters: Guide the overall functioning
+##### General Parameters: Guide the overall functioning
 
 1. booster [default=gbtree]
 
@@ -40,7 +40,7 @@ source : <https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-
 
 3. nthread [default to maximum number of threads available if not set]
 
-## Booster Parameters: Guide the individual booster (tree/regression) at each step
+##### Booster Parameters: Guide the individual booster (tree/regression) at each step
 
 Consider only tree booster here because it always outperforms the linear booster and thus the later is rarely used.
 
@@ -110,7 +110,7 @@ Consider only tree booster here because it always outperforms the linear booster
 12. scale_pos_weight [default=1]
     - A value greater than 0 should be used in case of high class imbalance as it helps in faster convergence.
 
-## Learning Task Parameters
+##### Learning Task Parameters
 
 1. objective [default=reg:linear]
 
